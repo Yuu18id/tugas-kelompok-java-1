@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class Modulo {
     public static void main(String[] args) {
+        //memanggil method
         modulo();
     }
 
