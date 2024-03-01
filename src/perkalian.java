@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class perkalian {
-    public static void main(String[] args) {
+    public static void Kali(){
         // Membuat objek Scanner untuk input dari pengguna
         Scanner scanner = new Scanner(System.in);
 
@@ -20,5 +20,8 @@ public class perkalian {
 
         // Menutup objek Scanner
         scanner.close();
+    }
+    public static void main(String[] args) {
+        Kali();
     }
 }
