@@ -2,8 +2,35 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
-        modulo();
+        System.out.println("Kalkulator Sederhana Kelompok 5");
+        System.out.println("1. Tambah");
+        System.out.println("2. Kurang");
+        System.out.println("3. Kali");
+        System.out.println("4. Bagi");
+        System.out.println("5. Modulo/sisa bagi");
+        System.out.print("Pilih Operasi: ");
+
+        Scanner scanner = new Scanner(System.in);
+        int pilihan = scanner.nextInt();
+        if (pilihan == 1) {
+            //method tambah
+        }
+        else if (pilihan == 2){
+            //method kurang
+        }
+        else if (pilihan == 3){
+            //method kali
+        }
+        else if (pilihan == 4){
+            //method bagi
+        }
+        else if (pilihan == 5){
+            //method modulo
+            modulo();
+        } else {
+            System.out.println("Input yang anda masukkan salah");
+        }
+        scanner.close();
     }
 
     //Method untuk operasi modulo/sisa bagi
