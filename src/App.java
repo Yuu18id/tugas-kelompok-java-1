@@ -13,21 +13,18 @@ public class App {
         Scanner scanner = new Scanner(System.in);
         int pilihan = scanner.nextInt();
         if (pilihan == 1) {
-            //method tambah
-        }
-        else if (pilihan == 2){
-            //method kurang
+            // method tambah
+        } else if (pilihan == 2) {
+            // method kurang
             pengurangan();
-        }
-        else if (pilihan == 3){
-            //method kali
+        } else if (pilihan == 3) {
+            // method kali
             Kali();
-        }
-        else if (pilihan == 4){
-            //method bagi
-        }
-        else if (pilihan == 5){
-            //method modulo
+        } else if (pilihan == 4) {
+            // method bagi
+            pembagian();
+        } else if (pilihan == 5) {
+            // method modulo
             modulo();
         } else {
             System.out.println("Input yang anda masukkan salah");
@@ -35,51 +32,53 @@ public class App {
         scanner.close();
     }
 
-    //Method untuk operasi modulo/sisa bagi
+    // Method untuk operasi modulo/sisa bagi
     public static void modulo() {
-        //import scanner untuk sistem input
+        // import scanner untuk sistem input
         Scanner scanner = new Scanner(System.in);
 
-        //tampilan CLI
+        // tampilan CLI
         System.out.println("Menghitung Modulo (Sisa Bagi)");
         System.out.print("Angka 1: ");
 
-        //variabel untuk menampung angka 1
+        // variabel untuk menampung angka 1
         int angka1 = scanner.nextInt();
         System.out.print("Angka 2: ");
 
-        //variabel untuk menampung angka 2
+        // variabel untuk menampung angka 2
         int angka2 = scanner.nextInt();
 
-        //variabel yg menyimpan hasil modulo berdasarkan rumus yg dibuat
+        // variabel yg menyimpan hasil modulo berdasarkan rumus yg dibuat
         int hasil = angka1 % angka2;
 
-        //cetak hasil akhir
-        System.out.println("Hasil Modulo : "+ hasil);
+        // cetak hasil akhir
+        System.out.println("Hasil Modulo : " + hasil);
 
-        //menutup scanner
+        // menutup scanner
         scanner.close();
-}
-public static void pengurangan(){
-    Scanner scanner = new Scanner(System.in);
+    }
 
-    //memasukkan angka pertama
-    System.out.print("Masukkan angka pertama: ");
-    double angkaPertama = scanner.nextDouble();
+    public static void pengurangan() {
+        Scanner scanner = new Scanner(System.in);
 
-    //masukkan angka kedua
-    System.out.print("Masukkan angka kedua: ");
-    double angkaKedua = scanner.nextDouble();
+        // memasukkan angka pertama
+        System.out.print("Masukkan angka pertama: ");
+        double angkaPertama = scanner.nextDouble();
 
-    //memanggil metode pengurangan
-    double hasil = angkaPertama - angkaKedua;
+        // masukkan angka kedua
+        System.out.print("Masukkan angka kedua: ");
+        double angkaKedua = scanner.nextDouble();
 
-    //menampilkan hasil pengurangan
-    System.out.println("Hasil pengurangan: " + hasil);
+        // memanggil metode pengurangan
+        double hasil = angkaPertama - angkaKedua;
 
-    scanner.close();
-}
-public static void Kali(){
+        // menampilkan hasil pengurangan
+        System.out.println("Hasil pengurangan: " + hasil);
+
+        scanner.close();
+    }
+
+    public static void Kali() {
         // Membuat objek Scanner untuk input dari pengguna
         Scanner scanner = new Scanner(System.in);
 
@@ -99,7 +98,30 @@ public static void Kali(){
         // Menutup objek Scanner
         scanner.close();
     }
+
+    public static void pembagian() {
+        // Membuat objek Scanner untuk mendapatkan input dari pengguna
+        Scanner scanner = new Scanner(System.in);
+
+        // Meminta pengguna memasukkan angka pertama
+        System.out.print("Masukkan angka pertama: ");
+        double angkaPertama = scanner.nextDouble();
+
+        // Meminta pengguna memasukkan angka kedua
+        System.out.print("Masukkan angka kedua: ");
+        double angkaKedua = scanner.nextDouble();
+
+        // Memastikan pembagian tidak oleh nol
+        if (angkaKedua != 0) {
+            // Melakukan pembagian jika angka kedua tidak sama dengan nol
+            double hasil = angkaPertama / angkaKedua;
+            System.out.println("Hasil pembagian: " + hasil);
+        } else {
+            // Menampilkan pesan kesalahan jika pembagian oleh nol terdeteksi
+            System.out.println("Error: Pembagian oleh nol tidak diizinkan.");
+        }
+
+        // Menutup objek Scanner untuk menghindari kebocoran sumber daya
+        scanner.close();
+    }
 }
-
-
-
