@@ -27,5 +27,8 @@ public class Modulo {
 
         //cetak hasil akhir
         System.out.println("Hasil Modulo : "+ hasil);
+
+        //menutup scanner
+        scanner.close();
     }
 }
