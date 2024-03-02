@@ -14,6 +14,7 @@ public class App {
         int pilihan = scanner.nextInt();
         if (pilihan == 1) {
             // method tambah
+            penjumlahan();
         } else if (pilihan == 2) {
             // method kurang
             pengurangan();
@@ -55,6 +56,24 @@ public class App {
         System.out.println("Hasil Modulo : " + hasil);
 
         // menutup scanner
+        scanner.close();
+    }
+
+    public static void penjumlahan() {
+        Scanner scanner = new Scanner(System.in);
+
+        // memasukkan angka pertama
+        System.out.print("Masukkan angka pertama: ");
+        double num1 = scanner.nextDouble();
+
+        // masukkan angka kedua
+        System.out.print("Masukkan angka kedua: ");
+        double num2 = scanner.nextDouble();
+
+        // memanggil metode penjumlahan
+        operasi_penjumlahan(num1, num2);
+
+        // Menutup object scanner
         scanner.close();
     }
 
@@ -123,5 +142,13 @@ public class App {
 
         // Menutup objek Scanner untuk menghindari kebocoran sumber daya
         scanner.close();
+    }
+
+    // Method untuk menjumlahkan
+    static void operasi_penjumlahan(double num1, double num2) {
+        double result = num1 + num2;
+
+        // menampilkan hasil penjumlahan
+        System.out.println("Hasil penjumlahan: " + result);
     }
 }
